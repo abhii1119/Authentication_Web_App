@@ -35,7 +35,7 @@ export default function Login() {
           <button type="submit" className="btn btn-primary">Sign In</button>
         </form>
         <div className="auth-link">Don't have an account? <Link to="/register">Sign Up</Link></div>
-        <div style={{ marginTop: 16, padding: 12, background: '#f3f4f6', borderRadius: 8, fontSize: '.8rem', color: '#4b5563' }}>
+        <div className="auth-note">
           <strong>Demo Accounts:</strong><br />
           Admin: admin@demo.com / admin123<br />
           Member: john@demo.com / john123

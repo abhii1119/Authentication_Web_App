@@ -13,13 +13,18 @@ export default function Layout() {
     <div className="app-layout">
       <aside className="sidebar">
         <div className="sidebar-header">
-          <h2>📋 Task Manager</h2>
-          <p>Team Collaboration</p>
+          <div className="brand">
+            <div className="brand-mark">TM</div>
+            <div>
+              <h2>Task Manager</h2>
+              <p>Project Control Center</p>
+            </div>
+          </div>
         </div>
         <nav className="sidebar-nav">
-          <NavLink to="/dashboard" className={({ isActive }) => isActive ? 'active' : ''}>📊 Dashboard</NavLink>
-          <NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : ''}>📁 Projects</NavLink>
-          <NavLink to="/tasks" className={({ isActive }) => isActive ? 'active' : ''}>✅ Tasks</NavLink>
+          <NavLink to="/dashboard" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>Dashboard</NavLink>
+          <NavLink to="/projects" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>Projects</NavLink>
+          <NavLink to="/tasks" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>Tasks</NavLink>
         </nav>
         <div className="sidebar-user">
           <div className="user-info">
@@ -29,7 +34,7 @@ export default function Layout() {
               <div className="user-role">{user?.role}</div>
             </div>
           </div>
-          <button className="btn btn-secondary btn-sm" onClick={handleLogout} style={{ width: '100%' }}>Logout</button>
+          <button className="btn btn-secondary btn-sm btn-block" onClick={handleLogout}>Logout</button>
         </div>
       </aside>
       <main className="main-content"><Outlet /></main>
